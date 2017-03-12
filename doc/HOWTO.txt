@@ -1,0 +1,69 @@
+					jw, Sa 11. Mär 13:36:00 CET 2017
+					jw, Fr 10. Mär 20:47:28 CET 2017
+do the assembly
+===============
+firefox https://www.imakr.com/en/content/169-startt-3d-printer-support
+# open Assembling_Guide_English.pdf
+#
+# Additional resources:
+# - Reserve table space of ca. 0.8m x 1.4m
+# - Have a plate for spreading out the contents of the pack of screws and nuts. 
+# - Have a second small plate for collecting the screws and nuts for each step.
+# - A tipped knive, safer if blunt.
+# - pointed pair of pliers for holding nuts. Especially also the ring on the power jack.
+
+-> The acrylic parts are all covered on both sides with adhesive paper.
+   This needs to be peeled off. A tipped knive is very helpful to get moving at one corner.
+   The small flat screwdriver also works.
+ 
+-> Step 2: There are two switches with short leads, one with long leads. Used a short one.
+
+-> Step 4: There may be some acrylic dirt attached to the inside of the Motor
+   Holder. Scrape this off with a knive.
+   Do not tighten the 'Motor Holder' without assembling the motor
+   There should be a hole in the 'Motor Holder', so that the screw beneath can be reached.
+
+-> Step 6: In Parts required: 'Smooth Rod x2' should say 'Smooth Rod (shortest) x2' 
+   This is only mentioned later, causing a needless moment of confusion.
+   
+-> Step 7: Orient the motor connectors under the longer side of the acrylic pieces.
+
+-> Step 8: In Parts Required: Left stepper motor should mention '(A)', right motor '(B)'
+
+-> Step 9: Use the limit switch with the long leads.
+
+-> Do step 13 before step 12. The power jack assembles much more easily while the back is separate.
+
+-> Step 13: The threaded rods used here are longer than the lead screws. Their tracks are sharper, 
+   but same pitch as those of the lead screws (not 'thinner'). 
+
+-> Step 15: The wider side should be on the left, near the Z-limit switch.
+   Expect the 3D printed spanner to be spent, after being used here.
+
+-> Step 19: The thicker and longer rods are 28.5cm long.
+
+-> Step 20: preassemble the lead screws into the bronce metal parts. 
+   They might have a very tight initial fit. Remove again.
+   The bronce metal parts might be mounted slanted. Loosen their screws.
+
+-> Step 21: There is nothing that holds against the force of the X-belt. Ouch.
+   Rod caps on the printed part are missing!
+   5) Feed back through the bottom gap of the ---acrylic--- +++3d printed+++ piece.
+
+-> Step 22: The screws on the PCB cannot be tightened without bending the board. 
+   Washers and spacers needed! The 3x 25mm screws need spacers too!
+   The buttons must not protrude from the acrylic board more than 1mm, or they get hit by the printhead.
+   The display must be flush with the acrylic board, or the bowden tube gets caught.
+
+-> Step 23: The two holes in the acrylic side have bad tolerances. 
+   The lower holes should go up by 1mm.
+   The screen plate should be 2cm further back, so that the teflon tube can move freely in front.
+   The teflon tube should be 10cm longer.
+
+-> Step 25: no sunk space for screw head in bed.
+   The long end of the bed points iwards.
+
+-> Step 27: 'over the top' means over the top of the hot end, but below the display bridge.
+   Fix the black wrapped cable trunk to the hot end with one of the white pieces, fix it to the frame 
+   with another. 
+   14. Take yourself time to really tidy up the cables.
