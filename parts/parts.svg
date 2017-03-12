@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.91 r"
-   sodipodi:docname="y-idler-mount.svg">
+   sodipodi:docname="parts.svg">
   <title
      id="title5630">Laser-Vorlage 300x400mm</title>
   <defs
@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="9.8217542"
-     inkscape:cx="109.81169"
-     inkscape:cy="665.60916"
+     inkscape:zoom="4.3038312"
+     inkscape:cx="114.91248"
+     inkscape:cy="595.20725"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -114,10 +114,19 @@ Siehe auch https://wiki.fablab-nuernberg.de/w/Inkscape#Standardeinstellungen</dc
      id="layer1"
      transform="translate(0,3)">
     <path
-       id="path4136"
-       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#00ff00;stroke-width:0.20000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="y-idler-mount_5mm"
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#00ff00;stroke-width:0.10000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 27.300425,109.00001 c 0,1.65685 -1.343146,3 -3,3 -1.656854,0 -3,-1.34315 -3,-3 0,-1.65685 1.343146,-3 3,-3 1.656854,0 3,1.34315 3,3 z m -9.981526,5.67964 c 2.126325,2.61372 5.555059,3.91239 8.831896,3.12809 7.172055,-1.71661 12.849191,-0.80773 18.849191,-0.80773 l 0,-2 4.999999,0 0,-8 -5.199999,0 0,-2 -5.8,0 0,1.3 -3,0 0,-1.3 -6.000001,0 0,-3 6.000001,0 0,-1.3 3,0 0,1.3 5.8,0 0.2,-9.000003 c -17.000001,0 -25.703196,4.998405 -28.946442,12.395983 -1.352899,3.08585 -0.860971,6.66994 1.265355,9.28366 z"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="sssssssccccccccccccccccccss" />
+       sodipodi:nodetypes="sssssssccccccccccccccccccss"
+       inkscape:label="#path4136" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#00ff00;stroke-width:0.35433072;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 85.039062 435.82617 L 74.410156 446.45703 L 74.410156 520.86523 L 85.039062 531.49609 L 159.44922 531.49609 L 159.44922 517.32227 L 177.16602 517.32227 L 177.16602 496.0625 L 158.74023 496.0625 L 158.74023 488.97656 L 138.18945 488.97656 L 138.18945 493.58203 L 127.55859 493.58203 L 127.55859 488.97656 L 106.29883 488.97656 L 106.29883 478.3457 L 127.55859 478.3457 L 127.55859 473.74023 L 138.18945 473.74023 L 138.18945 478.3457 L 158.74023 478.3457 L 159.44922 435.82617 L 85.039062 435.82617 z M 100.73828 462.4707 L 100.74023 462.4707 L 129.08594 462.4707 C 132.02131 462.4707 134.40039 464.84974 134.40039 467.78516 C 134.40039 470.72054 132.02131 473.09961 129.08594 473.09961 L 100.74023 473.09961 L 100.73828 473.09961 C 97.803817 473.09855 95.423828 470.71986 95.423828 467.78516 C 95.423828 464.85041 97.803817 462.4717 100.73828 462.4707 z M 100.73828 494.35938 L 100.74023 494.35938 L 129.08594 494.35938 C 132.02131 494.35938 134.40039 496.73845 134.40039 499.67383 C 134.40039 502.60921 132.02131 504.99023 129.08594 504.99023 L 100.74023 504.99023 L 100.73828 504.99023 C 97.803821 504.98917 95.423828 502.60854 95.423828 499.67383 C 95.423828 496.73908 97.803821 494.36037 100.73828 494.35938 z "
+       transform="matrix(0.28222224,0,0,0.28222224,-1.7225479e-5,-3)"
+       id="y-endstop-mount_5mm" />
+    <g
+       id="g3354"
+       transform="translate(13.630419,-2.1802736)" />
   </g>
 </svg>
