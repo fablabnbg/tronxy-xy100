@@ -1,4 +1,4 @@
-Maximising the Print Area
+Maximizing the Print Area
 =========================
 
 The movement in X and Y direction does not exactly bring the nozzle to the
