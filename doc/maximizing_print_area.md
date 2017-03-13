@@ -15,8 +15,9 @@ Optimizing build height
 tightening the 4 thumb screws under the table. The available Z-end stop 
 adjustment can compensate for that.
 
-2. Upper movement is blocked by the print head hitting the buttons of the display. We re-mount the display, so that the buttons protrude only 1mm through the top plate, and the display itself is flush. parts/display-spacer.stl has a range of spacers, long and short in some variation.
+2. Upper movement is blocked by the print head hitting the buttons of the display already at a height of 65mm. We re-mount the display, so that the buttons protrude only 1mm through the top plate, and the display itself is flush. parts/display-spacer.stl has a range of spacers, long and short in some variation.
 
+The remaining obstacle is two rounded acrylic pieces colliding 5mm before the brass nuts would hit the top cover.
 
 Optimizing the front edge
 -------------------------
