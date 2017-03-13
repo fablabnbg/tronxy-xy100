@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.3598061"
-     inkscape:cx="82.06776"
-     inkscape:cy="568.6352"
+     inkscape:zoom="4.8601314"
+     inkscape:cx="122.24478"
+     inkscape:cy="579.331"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -122,7 +122,7 @@ Siehe auch https://wiki.fablab-nuernberg.de/w/Inkscape#Standardeinstellungen</dc
        inkscape:label="#path4136" />
     <path
        style="opacity:1;fill:#000000;fill-opacity:1;stroke:#00ff00;stroke-width:0.35433072;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 77.952448,435.82617 -10.628906,10.63086 0,74.4082 10.628906,10.63086 81.496772,0 0,-14.17382 17.7168,0 0,-21.25977 -18.42579,0 0,-7.08594 -20.55078,0 0,4.60547 -10.63086,0 0,-4.60547 -21.25976,0 0,-10.63086 21.25976,0 0,-4.60547 10.63086,0 0,4.60547 20.55078,0 0.70899,-42.51953 z m 22.785832,24.51725 0.002,0 28.34571,0 c 2.93537,0 5.31445,2.37904 5.31445,5.31446 0,2.93538 -2.37931,5.27776 -5.31445,5.31445 l -28.34571,0 -0.002,0 c -2.934463,-10e-4 -5.314452,-2.37975 -5.314452,-5.31445 0,-2.93475 2.379989,-5.31346 5.314452,-5.31446 z m 0,35.78644 0.002,0 28.34571,0 c 2.93537,0 5.31445,2.37907 5.31445,5.31445 0,2.93538 -2.37908,5.3164 -5.31445,5.3164 l -28.34571,0 -0.002,0 c -2.934459,-0.001 -5.314452,-2.38169 -5.314452,-5.3164 0,-2.93475 2.379993,-5.31346 5.314452,-5.31445 z"
+       d="m 77.952448,435.82617 -10.628906,10.63086 0,74.4082 10.628906,10.63086 81.496772,0 0,-14.17382 17.7168,0 0,-21.25977 -18.42579,0 0,-7.08594 -20.55078,0 0,4.60547 -9.5674,0 0,-4.60547 -22.32322,0 0,-10.63086 22.32322,0 0,-4.60547 9.5674,0 0,4.60547 20.55078,0 0.70899,-42.51953 z m 22.785832,25.93407 0.002,0 21.2591,0 c 2.93537,0 5.31445,1.67063 5.31445,4.60605 0,2.93538 -2.37908,4.60604 -5.31445,4.60604 l -21.2591,0 -0.002,0 c -2.934463,-10e-4 -5.314452,-1.67134 -5.314452,-4.60604 0,-2.93475 2.379989,-4.60505 5.314452,-4.60605 z m 0,34.36962 0.002,0 21.2591,0 c 2.93537,0 5.31445,1.67066 5.31445,4.60604 0,2.93538 -2.37908,4.60702 -5.31445,4.60702 l -21.2591,0 -0.002,0 c -2.934459,-10e-4 -5.314452,-1.67231 -5.314452,-4.60702 0,-2.93475 2.379993,-4.60505 5.314452,-4.60604 z"
        transform="matrix(0.28222224,0,0,0.28222224,-1.7225479e-5,-3)"
        id="y-endstop-mount_5mm"
        inkscape:connector-curvature="0"
@@ -130,5 +130,28 @@ Siehe auch https://wiki.fablab-nuernberg.de/w/Inkscape#Standardeinstellungen</dc
     <g
        id="g3354"
        transform="translate(13.630419,-2.1802736)" />
+    <g
+       id="x-gantry-far-end-cover"
+       inkscape:label="#g4151">
+      <path
+         style="opacity:1;fill:#000000;fill-opacity:0.30395137;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.37795275;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 53.150391 602.36328 L 53.150391 761.81055 L 287.00781 761.81055 L 287.00781 602.36328 L 53.150391 602.36328 z M 159.44922 620.07812 A 17.716536 17.716536 0 0 1 177.16602 637.79492 A 17.716536 17.716536 0 0 1 176.80664 641.33789 L 251.57422 641.33789 L 251.57422 726.37891 L 88.582031 726.37891 L 88.582031 641.33789 L 142.10938 641.33789 A 17.716536 17.716536 0 0 1 141.73242 637.79492 A 17.716536 17.716536 0 0 1 159.44922 620.07812 z "
+         transform="matrix(0.28222224,0,0,0.28222224,-1.7225479e-5,-3)"
+         id="rect3338_2mm" />
+      <path
+         inkscape:label="#path4143_5mm"
+         id="path4143_13mm"
+         transform="matrix(0.28222224,0,0,0.28222224,-1.7225479e-5,-3)"
+         d="M 53.150391 602.36328 L 53.150391 761.81055 L 287.00781 761.81055 L 287.00781 602.36328 L 262.20508 602.36328 L 262.20508 616.53516 L 276.37695 616.53516 L 276.37695 751.18164 L 63.779297 751.18164 L 63.779297 616.53516 L 77.953125 616.53516 L 77.953125 602.36328 L 53.150391 602.36328 z "
+         style="opacity:1;fill:#000000;fill-opacity:0.30395137;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.37795275;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         inkscape:label="#rect4149"
+         y="167"
+         x="18.999985"
+         height="4"
+         width="57.000004"
+         id="rect4149_5mm"
+         style="opacity:1;fill:#000000;fill-opacity:0.30395138;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.10666668;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
   </g>
 </svg>

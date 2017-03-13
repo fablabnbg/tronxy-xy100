@@ -34,6 +34,8 @@ Redsigned end-caps with only 2mm thickness under the screw head allow for use of
 3. The Y motor mount has an upper edge that collides with the table.
 The edge needs to be cut away with saw and file. (I am too lazy to recreate that piece right now.)
 
+4. The y motor connector is on the top according to the assembly guide. This collides with the print plate. Rotate the motor 180 deg, there is enough space on the bottom to accomodate connector and cable.
+
 With these adjustments, the nozzle reaches the fromt of the build plate just
 before the table hits the screws in the back wall. No further optimization
 possible there. Please make sure all cables are zip tied away from the
