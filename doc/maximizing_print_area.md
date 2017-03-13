@@ -32,8 +32,8 @@ A redesigned y-endstop-mount.stl allows adjustment.
 2. The long 20mm screws from the end-caps of the rods protrude ca 10mm beyond the nuts. This collides with the table.
 Redsigned end-caps with only 2mm thickness under the screw head allow for use of 10mm screws that do not protrude at all.
   
-3. The Y motor mount has an upper edge that collides with the table.
-The edge needs to be cut away with saw and file. (I am too lazy to recreate that piece right now.)
+3. The Y motor mount has an upper corner that collides with the table.
+The corner needs to be cut away with saw and file. (I am too lazy to recreate that piece right now.)
 
 4. The y motor connector is on the top according to the assembly guide. This collides with the print plate. Rotate the motor 180 deg, there is enough space on the bottom to accomodate connector and cable.
 
