@@ -42,7 +42,7 @@ before the table hits the screws in the back wall. No further optimization
 possible there. Please make sure all cables are zip tied away from the
 collision area.
 
-Optimizing the back edge
+Optimizing the rear edge
 ------------------------
 
 The programmed travel is longer than the physical travel. Pausing a print causes the table to move fully outward and hitting the physical limits. The y-position is lost, resuming the print is not possible.
@@ -51,4 +51,5 @@ The programmed travel is longer than the physical travel. Pausing a print causes
 A redesigned parts/y-idler-mount lowers the idler by 1.5mm so that it fits 
 under the table. A belt tensioning mechanism could also be added here. Easiest is an oblong hole for mounting the roller bearing.
 
+The belt is attached to the table at a position reached by the idler. This prevents further movement. The rails have 8 mm more travel, but the nozzle is already 4 mm beyond the rear edge of the plate.
 
