@@ -27,11 +27,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.8601314"
-     inkscape:cx="122.24478"
-     inkscape:cy="579.331"
+     inkscape:zoom="3.0541518"
+     inkscape:cx="170.26114"
+     inkscape:cy="389.96011"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="x-gantry-far-end-cover"
      showgrid="true"
      objecttolerance="10"
      gridtolerance="10"
@@ -135,15 +135,19 @@ Siehe auch https://wiki.fablab-nuernberg.de/w/Inkscape#Standardeinstellungen</dc
        inkscape:label="#g4151">
       <path
          style="opacity:1;fill:#000000;fill-opacity:0.30395137;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.37795275;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         d="M 53.150391 602.36328 L 53.150391 761.81055 L 287.00781 761.81055 L 287.00781 602.36328 L 53.150391 602.36328 z M 159.44922 620.07812 A 17.716536 17.716536 0 0 1 177.16602 637.79492 A 17.716536 17.716536 0 0 1 176.80664 641.33789 L 251.57422 641.33789 L 251.57422 726.37891 L 88.582031 726.37891 L 88.582031 641.33789 L 142.10938 641.33789 A 17.716536 17.716536 0 0 1 141.73242 637.79492 A 17.716536 17.716536 0 0 1 159.44922 620.07812 z "
+         d="m 56.693698,602.36328 0,38.97461 7.085599,0 78.330083,0 c -0.24439,-1.16532 -0.37068,-2.35231 -0.37696,-3.54297 -1.5e-4,-9.78478 7.93202,-17.71695 17.7168,-17.7168 9.78478,-1.5e-4 17.71695,7.93202 17.7168,17.7168 -4.9e-4,1.19006 -0.1209,2.37705 -0.35938,3.54297 l 99.57227,0 7.08559,0 0,-38.97461 z m 0,109.84112 0,42.51953 42.519531,0 0,-7.0856 -35.433932,-35.43393 z m 219.685212,0 -35.43394,35.43393 0,7.0856 42.51953,0 0,-42.51953 z"
          transform="matrix(0.28222224,0,0,0.28222224,-1.7225479e-5,-3)"
-         id="rect3338_2mm" />
+         id="rect3338_2mm"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccccccccccccccccccccc" />
       <path
          inkscape:label="#path4143_5mm"
          id="path4143_13mm"
+         d="m 53.150391,602.36328 1.309693,78.19861 -1.309693,77.70535 233.857419,0 -1.30969,-80.32473 1.30969,-75.57923 -24.80273,0 0,14.17188 14.17187,0 -1.30969,62.38961 1.30969,68.71356 -212.597653,0 1.309693,-66.42159 -1.309693,-64.68158 14.173828,0 0,-14.17188 z"
+         style="opacity:1;fill:#000000;fill-opacity:0.30395137;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.37795275;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          transform="matrix(0.28222224,0,0,0.28222224,-1.7225479e-5,-3)"
-         d="M 53.150391 602.36328 L 53.150391 761.81055 L 287.00781 761.81055 L 287.00781 602.36328 L 262.20508 602.36328 L 262.20508 616.53516 L 276.37695 616.53516 L 276.37695 751.18164 L 63.779297 751.18164 L 63.779297 616.53516 L 77.953125 616.53516 L 77.953125 602.36328 L 53.150391 602.36328 z "
-         style="opacity:1;fill:#000000;fill-opacity:0.30395137;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.37795275;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccccccccccc" />
       <rect
          inkscape:label="#rect4149"
          y="167"
