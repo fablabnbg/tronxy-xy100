@@ -1,7 +1,9 @@
 # tronxy-xy100
 Working with an inexpensive 3D printer. Other names: STARTT (from imakr.com) or Anet A8
 
-References:
+The designs found here are also published at http://www.thingiverse.com/thing:2174029
+
+External references:
 
 * https://www.imakr.com/en/content/169-startt-3d-printer-support
 * https://www.aliexpress.com/store/1968437
