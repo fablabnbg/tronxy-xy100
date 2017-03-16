@@ -1,4 +1,4 @@
-# tronxy-xy100
+# TRONXY-xy100-STARTT
 Working with an inexpensive 3D printer. Other names: STARTT (from imakr.com) or Anet A8
 
 The designs found here are also published at http://www.thingiverse.com/thing:2174029
