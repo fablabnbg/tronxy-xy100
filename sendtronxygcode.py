@@ -95,8 +95,13 @@ def ser_write(line):
       if n < 0: raise WriteError()
       line = line[n:]
 
-
-ser_open()
+## not available on tronxy: M21 says format error:
+"""
+   	sdcard upload FILENAME [DIR]		; store a file on SDcard
+   	sdcard list [DIR]			; list SDcard contents
+   	sdcard delete [DIR/]FILENAME		; 
+   	sdcard print [DIR/]FILENAME		; starts a print.
+"""
 
 if len(sys.argv) <= 1 or ( sys.argv[1][0] == '-' and sys.argv[1][1] not in "gcf" ):
   print """
@@ -111,11 +116,9 @@ If no option is given, -f is default.
 -c CMD args ...
    Most commands can be abbreviated to one or two letters. 
    Available commands are:
-   	sdcard upload FILENAME [DIR]		; store a file on SDcard
-   	sdcard list [DIR]			; list SDcard contents
-   	sdcard delete [DIR/]FILENAME		; 
-   	sdcard print [DIR/]FILENAME		; starts a print.
 	up 10mm					; move the printhead up 10mm
+	home [all|xy|x|y|z]			; home all or some axis.
+	off					; cancel all action and turn motors off.
 
 -g CMD args ...
     followed by gcode arguments. E.g. 
@@ -125,21 +128,44 @@ If no option is given, -f is default.
 	M104 S190		; set extruder temperature to 190 C
         M84			; motors off
 	M42 Pxxx Syyy		; set GPIO pin xxx to value yyy.
+	G92 X0 Y0 Z0 E0		; define the current positions as origin.
     The full list of supported commands differs per firmware. 
     See http://reprap.org/wiki/G-code
 """
   sys.exit(0)
 
+
+ser_open()
+
+
 if sys.argv[1] == '-c':
-  if sys.argv[2] == 'up':
+  if sys.argv[2] in ('u', 'up'):
     ser.write("G21\n");		# ;metric values
     ser.write("G90\n");		# ;absolute positioning
-    ser.write("M104 S190.0\n");		# pre-heat extruder
-    # ser.write("G28 Z0\n")		# search endstop
     ser.write("G92 Z0\nG1 Z10.0 F2400\n")	# zero z, then move (relative)
     ser_check()
     print("move up 10mm")
-    ser.write("M109 S190.0\n");		# wait for heat
+    # ser.write("M109 S190.0\n");		# wait for heat
+
+  elif sys.argv[2] in ('p', 'preheat'):
+    ser.write("M104 S190.0\n");		# 190
+
+  elif sys.argv[2] in ('c', 'cool', 'cooldown'):
+    ser.write("M104 S0\n");		# cooldown
+
+  elif sys.argv[2] in ('h', 'home'):
+    if len(sys.argv) <= 3 or sys.argv[3] in ('all', 'xyz'):
+      ser.write("G28 X0 Y0 Z0\n");
+    elif sys.argv[3] == 'xy':
+      ser.write("G28 X0 Y0\n");
+    elif sys.argv[3] == 'x':
+      ser.write("G28 X0\n");
+    elif sys.argv[3] == 'y':
+      ser.write("G28 Y0\n");
+    elif sys.argv[3] == 'z':
+      ser.write("G28 Z0\n");
+    else:
+      print "unknown home command. Try all, xy, z."
 
   elif sys.argv[2] in ('s', 'sdcard'):
     if sys.argv[3] in ('u', 'up', 'upload'):
@@ -153,9 +179,13 @@ if sys.argv[1] == '-c':
     else:
       print "unknown sdcard command. Try list, upload, delete, print"
     
-  elif sys.argv[2] in ('0', 'o', 'off'):
+  elif sys.argv[2] in ('0', 'o', 'off', 'cancel', 'reset'):
+    ser.write("M108\n");
     ser.write("M104 S0\n");
     ser.write("M84\n");
+
+  else:
+    print "unkown command, try -h for a list."
     
   ser_check()
   ser.close()
@@ -163,9 +193,13 @@ if sys.argv[1] == '-c':
 
 
 if sys.argv[1] == '-g':
-  line = ' '.join(sys.argv[1:])
-  ser_write(line)
-  ser_check()
+  # upper case the first word, Mxxx or Gxxx command, keep the rest as they are...
+  if sys.argv[2].upper() != sys.argv[2]:
+    print "Error: Please use uppercase for G and M commands."
+  else:
+    line = ' '.join(sys.argv[2:])
+    ser_write(line)
+    ser_check()
   ser.close()
   sys.exit(0)
 
