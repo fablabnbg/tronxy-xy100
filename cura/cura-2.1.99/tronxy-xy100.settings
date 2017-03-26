@@ -59,9 +59,11 @@ quality_type = normal
 [values]
 ; Quality
 layer_height = 0.2
+Initial Layer Height	0.2 mm
 
 ; Shell
 wall_thickness = 0.4
+Wall Line Count		3
 top_thickness = 0.8
 top_bottom_thickness = 0.8
 top_bottom_pattern = lines
@@ -69,29 +71,42 @@ alternate_extra_perimeter = True
 
 ; Infill
 infill_sparse_density = 20
-gradual_infill_steps = 3
-infill_pattern = grid
+gradual_infill_steps = 2
+infill_pattern = Tetrahedral
 infill_line_distance = 3
-gradual_infill_step_height = 2
+gradual_infill_step_height = 3
+Infill Line Width		0.6 mm
 
 ; Material
 material_print_temperature = 200
 material_diameter = 1.75
+Flow			100 %
 retraction_amount = 6.5
-retraction_speed = 40
-retraction_hop_enabled = 0.05
+retraction_speed = 25
+Retraction Minimum Trave	0.8 mm
+Z Hop when Retracted		True
+Z Hop Height			0.2 mm
 retraction_count_max = 30
 
 ; Speed
-speed_print = 60
-speed_infill = 100
-speed_outer_wall = 60
-speed_inner_wall = 40
+speed_print = 80
+speed_infill = 80
+speed_outer_wall = 40
+speed_inner_wall = 60
 speed_support = 100
 speed_layer_0 = 20
 speed_travel = 120
+Initial Layer Speed	15 mm/s
+Maximum Z Speed		1 mm/s
+
+
+; Travel
+Combing Mode 		All
+Avoid Printed Party when Travelling	True
 
 ; Cooling
+Enable Print Cooling	True
+Minimum Layer Time	30 s
 cool_min_layer_time = 30
 
 ; Support
@@ -99,10 +114,12 @@ support_enable = True
 support_type = buildplate
 support_pattern = zigzag
 support_infill_rate = 20
+Support Density			20 %
 support_z_distance = 0.4
 support_interface_enable = False
 support_interface_pattern = zigzag
-support_interface_density = 50
+Support Pattern			Zig Zag
+Connect Support ZigZags		True
 support_interface_height = 0.4
 
 ; Build Plate Adhesion
@@ -119,6 +136,14 @@ raft_base_line_spacing = 2.4
 raft_interface_speed = 40
 raft_speed = 80
 raft_base_speed = 20
+Raft Air Gap			0.1 mm
+Raft Middle Line Width		0.4 mm
+Raft Middle Spacing		0.6 mm
+Raft Base Thickness		0.2 mm
+Raft Base Line Width		0.8 mm
+Raft Line Spacing		2.4 mm
+Raft Print Speed		40 mm/s
+Raft Base Print Speed		10 mm/s
 
 ; Experimental
 meshfix_union_all = False
@@ -126,4 +151,5 @@ support_conical_enabled = True
 support_conical_min_width = 3
 wireframe_flow = 140
 wireframe_printspeed = 5
+Spiralize Outer Contour		True
 
