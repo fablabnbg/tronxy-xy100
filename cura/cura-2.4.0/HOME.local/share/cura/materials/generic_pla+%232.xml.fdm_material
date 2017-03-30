@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fdmmaterial xmlns="http://www.ultimaker.com/material">
+  <metadata>
+    <name>
+      <brand>Generic</brand>
+      <material>PLA</material>
+      <color>Generic</color>
+      <label>PLA 1.75</label>
+    </name>
+    <description />
+    <color_code>#ffc924</color_code>
+    <version>1</version>
+    <adhesion_info />
+    <GUID>506c9f0d-e3aa-4bd4-b2d2-23e2425b1aa9</GUID>
+    <compatible>True</compatible>
+  </metadata>
+  <properties>
+    <diameter>1.75</diameter>
+    <density>1.24</density>
+  </properties>
+  <settings>
+    <setting key="standby temperature">175</setting>
+    <setting key="print temperature">200</setting>
+    <setting key="heated bed temperature">60</setting>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker" product="Ultimaker 3" />
+      <setting key="print cooling">100</setting>
+      <hotend id="BB 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker" product="Ultimaker 2 Go" />
+      <setting key="standby temperature">150</setting>
+      <setting key="processing temperature graph">
+                </setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker" product="Ultimaker 2 Extended+" />
+      <hotend id="0.6 mm">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="0.25 mm">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="0.8 mm">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="0.4 mm">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker" product="Ultimaker Original" />
+      <setting key="standby temperature">150</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker" product="Ultimaker 2+" />
+      <hotend id="0.6 mm">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="0.4 mm">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="0.8 mm">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="0.25 mm">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker" product="Ultimaker 3 Extended" />
+      <setting key="print cooling">100</setting>
+      <hotend id="BB 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+      <hotend id="AA 0.4">
+        <setting key="hardware compatible">yes</setting>
+      </hotend>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker" product="Ultimaker 2" />
+      <setting key="standby temperature">150</setting>
+      <setting key="processing temperature graph">
+                </setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Ultimaker" product="Ultimaker 2 Extended" />
+      <setting key="standby temperature">150</setting>
+      <setting key="processing temperature graph">
+                </setting>
+    </machine>
+  </settings>
+</fdmmaterial>

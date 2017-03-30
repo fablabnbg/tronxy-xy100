@@ -12,6 +12,7 @@
 # 2016-10-14, jw -- est_time_min from cura ;TIME: string
 #
 import sys, re, serial, time
+import os.path
 
 
 verbose=False
@@ -97,7 +98,6 @@ def ser_write(line):
 
 ## not available on tronxy: M21 says format error:
 """
-   	sdcard upload FILENAME [DIR]		; store a file on SDcard
    	sdcard list [DIR]			; list SDcard contents
    	sdcard delete [DIR/]FILENAME		; 
    	sdcard print [DIR/]FILENAME		; starts a print.
@@ -119,6 +119,7 @@ If no option is given, -f is default.
 	up 10mm					; move the printhead up 10mm
 	home [all|xy|x|y|z]			; home all or some axis.
 	off					; cancel all action and turn motors off.
+   	sdcard upload FILENAME [DIR]		; store a file on SDcard
 
 -g CMD args ...
     followed by gcode arguments. E.g. 
@@ -169,11 +170,31 @@ if sys.argv[1] == '-c':
 
   elif sys.argv[2] in ('s', 'sdcard'):
     if sys.argv[3] in ('u', 'up', 'upload'):
-      print "upload a file to sdcard ..."
+      ser.write("M21\n")
+      print "uploading %s to %s" % (sys.argv[4], "/")
+      fd = open(sys.argv[4], 'r')
+      ser.write("M28 %s\n" % os.path.basename(sys.argv[4]));
+      while True:
+        line = fd.readline()
+        ser_write(line)
+        ser_check()
+      ser.write("M29\n")
+      
     elif sys.argv[3] in ('d', 'rm', 'del', 'remove', 'delete'):
       print "delete a file from sdcard ..."
+      ser.write("M21\n")
+      ser.write("M30 %s\n" % (sys.argv[4]))
+
     elif sys.argv[3] in ('p', 'print'):
       print "start printing a file from sdcard ..."
+      ser.write("M21\n")
+      ser.write("M23 %s\n" % (sys.argv[4]))
+      ser.write("M24\n")
+
+    elif sys.argv[3] in ('stop', 'pause'):
+      print "stop printing from sdcard"
+      ser.write("M25\n")
+
     elif sys.argv[3] in ('l', 'ls', 'list', 'dir'):
       print "list files on sdcard"
     else:
