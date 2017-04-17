@@ -4,7 +4,7 @@
                      try:
                          self._gcode_position = int(line.replace(b"N:",b" ").replace(b"N",b" ").replace(b":",b" ").split()[-1])
                      except:
-+                        Logger.log("i": "listen error: RESEND: " + line)
++                        Logger.log("i", "listen error: RESEND: " + line)
                          if b"rs" in line:
                              self._gcode_position = int(line.split()[1])
  
