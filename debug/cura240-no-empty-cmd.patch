@@ -1,24 +1,28 @@
 --- /usr/lib/cura/plugins/USBPrinting/USBPrinterOutputDevice.py.orig	2017-04-17 18:20:25.435827323 +0200
-+++ /usr/lib/cura/plugins/USBPrinting/USBPrinterOutputDevice.py	2017-04-17 20:18:01.355729914 +0200
-@@ -520,6 +520,7 @@
++++ /usr/lib/cura/plugins/USBPrinting/USBPrinterOutputDevice.py	2017-04-17 22:35:58.926910505 +0200
+@@ -516,7 +516,10 @@
+                         line = b""  # Force getting temperature as keep alive
+                     else:
+                         self._sendNextGcodeLine()
+-                elif b"resend" in line.lower() or b"rs" in line:  # Because a resend can be asked with "resend" and "rs"
++                elif b"resend:" in line.lower() or b"rs:" in line:  # Because a resend can be asked with "resend" and "rs"
++                    # Must include the colons, to avoid an 'rs' substring mismatch.
++                    # The final statistics with '.. XX hours , YY min ..' would cause havoc.
++                    Logger.log("i", "RESEND: " + str(line))
                      try:
                          self._gcode_position = int(line.replace(b"N:",b" ").replace(b"N",b" ").replace(b":",b" ").split()[-1])
                      except:
-+                        Logger.log("i", "listen error: RESEND: " + line)
-                         if b"rs" in line:
-                             self._gcode_position = int(line.split()[1])
- 
-@@ -547,6 +548,9 @@
+@@ -547,6 +550,9 @@
          try:
              if line == "M0" or line == "M1":
                  line = "M105"  # Don't send the M0 or M1 to the machine, as M0 and M1 are handled as an LCD menu pause.
 +            if line == "":
-+                line = "M117 Printing %d %d%%" % (self._gcode_position, self._gcode_position * 100 / len(self._gcode))
++                line = "M117 Printing %d/100" % (self._gcode_position * 100 / len(self._gcode))
 +                Logger.log("i", "'' -> '" + line + "'")
              if ("G0" in line or "G1" in line) and "Z" in line:
                  z = float(re.search("Z([0-9\.]*)", line).group(1))
                  if self._current_z != z:
-@@ -556,6 +560,7 @@
+@@ -556,6 +562,7 @@
              self._setErrorState("Unexpected error: %s" %e)
          checksum = functools.reduce(lambda x,y: x^y, map(ord, "N%d%s" % (self._gcode_position, line)))
  
