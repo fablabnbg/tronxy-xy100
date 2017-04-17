@@ -34,7 +34,7 @@
 -        checksum = functools.reduce(lambda x,y: x^y, map(ord, "N%d%s" % (self._gcode_position, line)))
  
 -        self._sendCommand("N%d%s*%d" % (self._gcode_position, line, checksum))
-+        ## Don't apply checksum with TRONXY tx100 
++        ## Don't apply checksum with TRONXY XY100
 +        ## When checksumming is on, we see erratic movememts along the Y axis.
 +        # checksum = functools.reduce(lambda x,y: x^y, map(ord, "N%d%s" % (self._gcode_position, line)))
 +        # Logger.log("i",   "N%d%s*%d" % (self._gcode_position, line, checksum))
