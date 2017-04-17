@@ -1,0 +1,175 @@
+A typical protocol leading to an error:
+---------------------------------------
+
+N15G1 Z15.0 F9000*51\n
+ ...
+N16G92 E0*80\n
+ ...
+N17G1 F200 E3*60\n
+ ...
+N18G92 E0*94\n
+ ...
+ X:-10.00 Y:0.00 Z:0.00 E:115.20\r\n
+ ok 15\r\n
+N19G1 F9000*95\n
+\nM105\n
+\nM105\n
+\nM105\n
+ X:-10.00 Y:0.00 Z:0.00 E:115.20\r\n
+ ok 16\r\n
+\nM105\n
+ ok 17\r\n
+\nM105\n
+ ok 18\r\n
+
+\nM105\n
+ ok 19\r\n
+\nM105\n
+ ok 19\r\n
+\nM105\n
+ ok 19\r\n
+\nM105\n
+ T:204.00 /205 @230\r\n
+ ok 19\r\n
+
+\nM105\n
+ T:204.00 /205 @230\r\n
+ ok 19\r\n
+
+\nM105\n
+ T:204.00 /205 @230\r\n
+ ok 19\r\n
+
+\nM105\n
+ T:204.00 /205 @230\r\n
+ ok 19\r\n
+
+\nN20M117 Printing...*9\n
+ T:204.00 /205 @230\r\n
+ ok 19\r\n
+
+\nN21*77\n
+ T:204.00 /205 @230\r\n
+ ok 19\r\n
+
+\nN22*78\n
+ T:204.00 /205 @230\r\n
+ ok 19\r\n
+
+\nN23M107*52\n
+ T:204.00 /205 @230\r\n
+ ok 19\r\n
+
+\nN24G1 F1500 E-6.5*57\n
+ T:204.00 /205 @230\r\n
+ ok 19\r\n
+
+\nN25G1 Z20.2*91\n
+ T:204.00 /205 @230\r\n
+ ok 19\r\n
+
+\nN26G0 F3600 X12.439 Y11.253 Z0.5"..., 35
+ T:204.00 /205 @230\r\n
+ ok 20\r\n
+
+\nN27*75\n
+ T:204.00 /205 @230\r\n
+ Error:Format error\r\n\r\n
+ Resend:21\r\n
+ ok\r\n
+
+\nN21*77\n
+ Error:Format error\r\n\r\n
+ Resend:21\r\n
+ ok\r\n
+
+\nN21*77\n
+ skip 23\r\n
+ ok\r\n
+
+\nN22*78\n
+ skip 24\r\n
+ ok\r\n
+
+\nN23M107*52\n
+ skip 25\r\n
+ ok\r\n
+
+\nN24G1 F1500 E-6.5*57\n
+ skip 26\r\n
+ ok\r\n
+
+\nN25G1 Z20.2*91\n
+ Error:Format error\r\n\r\n
+ Resend:21\r\n
+ ok\r\n
+
+\nN21*77\n
+ Error:Format error\r\n\r\n
+ Resend:21\r\n
+ ok\r\n
+
+\nN21*77\n
+ Error:Format error\r\n\r\n
+ Resend:21\r\n
+ ok\r\n
+
+\nN22*78\n
+ Unknown command:\r\n
+ Error:Format error\r\n
+ ok 22\r\n
+
+\nN23M107*52\n
+ Unknown command:\r\n
+ ok 23\r\n
+ 
+\nN24G1 F1500 E-6.5*57\n
+ ok 24\r\n
+
+\nN25G1 Z20.2*91\n
+ ok 25\r\n
+
+\nN26G0 F3600 X12.439 Y11.253 Z0.5"..., 35
+ Error:Format error\r\n\r\n
+ Resend:26\r\n
+ ok\r\n
+
+\nN26G0 F3600 X12.439 Y11.253 Z0.5"..., 35
+ Error:Format error\r\n\r\n
+ Resend:26\r\n
+ ok\r\n
+
+\nN26G0 F3600 X12.439 Y11.253 Z0.5"..., 35
+ Error:Format error\r\n
+ skip 22\r\n
+ ok\r\n
+
+\nN27*75\n
+ skip 23\r\n
+ ok\r\n
+
+\nN28G1 T0.3*101\n
+ skip 24\r\n
+ ok\r\n
+
+\nN29G1 F1500 E0*4\n
+ skip 25\r\n
+ ok\r\n
+
+\nN30G1 F1800 X13.733 Y9.989 E0.09"..., 39
+ ok 26\r\n
+
+\nN31G1 X14.351 Y9.495 E0.12972*76"..., 33
+ skip 26\r\n
+ ok\r\n
+
+\nN32G1 X16.063 Y8.384 E0.23154*71"..., 33
+ skip 26\r\n
+ ok\r\n
+ 
+\nN33G1 X16.557 Y8.11 E0.25972*113"..., 33
+ Error:Format error\r\n\r\n
+ Resend:27\r\n
+ ok\r\n
+
+

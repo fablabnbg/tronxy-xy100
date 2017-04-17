@@ -1,0 +1,50 @@
+			jw, Mo 17. Apr 14:07:55 CEST 2017
+
+Debugging the usb connection
+============================
+
+strace is the best tool to monitor the IO on the usb connection.
+Unfortunateley, (after so many years of evolution) there is still 
+no option to filter for one filedescriptor only.
+(No, strace -e read=31 does not suppress read calls on other filedescriptors!)
+
+This workaround is acceptable with a two digit filedescriptor:
+
+ps -efww | grep cura
+ testy    28068     1 18 13:30 pts/1    00:08:31 /usr/bin/python3 /usr/bin/cura juergen.stl
+lsof -p 28068 | grep USB
+ cura    28068 testy   31u      CHR              188,0      0t0      625 /dev/ttyUSB0
+sudo strace -s 1000 -f -p 28068 -e trace=read,write 2>&1| grep -A1 -w 31 | tee usb-log-cura.trace
+
+Temperature reporting looks like this:
+--------------------------------------
+
+[pid 28162] write(31, "\nM105\n"
+[pid 28162] read(31, "ok 706\r\nT:24.44/0 @:0\r\n"
+                     "wait\r\n"
+                     "wait\r\n"
+                     "wait\r\n"
+                     "wait\r\n"
+                     "wait\r\n"
+                     "wait\r\n"
+[pid 28162] write(31, "\nM105\n"
+
+
+usb-err-01.log shows that an empty command causes resends.
+
+\nN21*77\n
+ T:204.00 /205 @230\r\n
+ ok 19\r\n
+...
+\nN27*75\n
+ T:204.00 /205 @230\r\n
+ Error:Format error\r\n\r\n
+ Resend:21\r\n
+ ok\r\n
+
+\nN21*77\n
+ Error:Format error\r\n\r\n
+ Resend:21\r\n
+ ok\r\n
+
+
