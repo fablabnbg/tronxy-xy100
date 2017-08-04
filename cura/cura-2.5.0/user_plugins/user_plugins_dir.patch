@@ -1,0 +1,117 @@
+diff -Nur Cura-2.5.0.AppImage.AppDir/cura.desktop Cura-2.5.0.jw1.AppImage.AppDir/cura.desktop
+--- Cura-2.5.0.AppImage.AppDir/cura.desktop	2017-04-19 04:36:46.000000000 +0200
++++ Cura-2.5.0.jw1.AppImage.AppDir/cura.desktop	2017-08-02 17:00:11.068007778 +0200
+@@ -6,7 +6,7 @@
+ GenericName[de]=3D-Druck-Software
+ Comment=Cura converts 3D models into paths for a 3D printer. It prepares your print for maximum accuracy, minimum printing time and good reliability with many extra features that make your print come out great.
+ Exec=cura.sh
+-Icon=cura-icon.png
++Icon=cura-icon
+ Terminal=false
+ Type=Application
+ MimeType=application/sla;application/vnd.ms-3mfdocument;application/prs.wavefront-obj;image/bmp;image/gif;image/jpeg;image/png
+diff -Nur Cura-2.5.0.AppImage.AppDir/usr/bin/plugins/plugins/PostProcessingPlugin/__init__.py Cura-2.5.0.jw1.AppImage.AppDir/usr/bin/plugins/plugins/PostProcessingPlugin/__init__.py
+--- Cura-2.5.0.AppImage.AppDir/usr/bin/plugins/plugins/PostProcessingPlugin/__init__.py	2017-04-19 04:34:28.000000000 +0200
++++ Cura-2.5.0.jw1.AppImage.AppDir/usr/bin/plugins/plugins/PostProcessingPlugin/__init__.py	2017-08-04 02:42:41.550123816 +0200
+@@ -11,11 +11,11 @@
+         {
+             "name": catalog.i18nc("@label", "Post Processing"),
+             "author": "Ultimaker",
+-            "version": "2.2",
++            "version": "2.2.jw1",
+             "api": 3,
+-            "description": catalog.i18nc("Description of plugin","Extension that allows for user created scripts for post processing")
++            "description": catalog.i18nc("Description of plugin","Extension that allows for user created scripts for post processing. Place your scripts in $HOME/.config/cura/plugins/PostProcessingPlugin/scripts/")
+         }
+     }
+         
+ def register(app):
+-    return {"extension": PostProcessingPlugin.PostProcessingPlugin()}
+\ Kein Zeilenumbruch am Dateiende.
++    return {"extension": PostProcessingPlugin.PostProcessingPlugin()}
+diff -Nur Cura-2.5.0.AppImage.AppDir/usr/bin/plugins/plugins/PostProcessingPlugin/PostProcessingPlugin.py Cura-2.5.0.jw1.AppImage.AppDir/usr/bin/plugins/plugins/PostProcessingPlugin/PostProcessingPlugin.py
+--- Cura-2.5.0.AppImage.AppDir/usr/bin/plugins/plugins/PostProcessingPlugin/PostProcessingPlugin.py	2017-04-19 04:34:28.000000000 +0200
++++ Cura-2.5.0.jw1.AppImage.AppDir/usr/bin/plugins/plugins/PostProcessingPlugin/PostProcessingPlugin.py	2017-08-04 01:56:58.405194503 +0200
+@@ -99,13 +99,24 @@
+     ##  Load all scripts from provided path.
+     #   This should probably only be done on init.
+     #   \param path Path to check for scripts.
+-    def loadAllScripts(self, path):
+-        scripts = pkgutil.iter_modules(path = [path])
+-        for loader, script_name, ispkg in scripts:
++    def loadAllScripts(self, path, user_path):
++        import importlib.util
++        scripts = pkgutil.iter_modules(path = [path, user_path])
++        for file_finder, script_name, ispkg in scripts:
+             # Iterate over all scripts.
+             if script_name not in sys.modules:
+                 # Import module
+-                loaded_script = __import__("PostProcessingPlugin.scripts."+ script_name, fromlist = [script_name])
++                try:
++                    ## this only works in-tree, but it prepares the 'PostProcessingPlugin.scripts' module.
++                    loaded_script = __import__("PostProcessingPlugin.scripts."+ script_name, fromlist = [script_name])
++                except:
++                    ## same as above but using the finder that we already have. This supports out of tree user_path scripts.
++                    loader = file_finder.find_module(script_name)
++                    # see https://docs.python.org/3.6/library/importlib.html?highlight=__import__#importing-a-source-file-directly
++                    spec = importlib.util.spec_from_file_location('PostProcessingPlugin.scripts.' + script_name, loader.path)
++                    loaded_script = importlib.util.module_from_spec(spec)
++                    spec.loader.exec_module(loaded_script)
++
+                 loaded_class = getattr(loaded_script, script_name)
+                 temp_object = loaded_class()
+                 Logger.log("d", "Begin loading of script: %s", script_name)
+@@ -149,11 +160,22 @@
+     
+     ##  Creates the view used by show popup. The view is saved because of the fairly aggressive garbage collection.
+     def _createView(self):
++        global __file__
++        import os
++
+         Logger.log("d", "Creating post processing plugin view.")
+ 
++        user_plugins_PPP = None
++        if os.getenv('HOME') is not None:
++            user_plugins_PPP = os.getenv('HOME') + '/.config/cura/plugins/PostProcessingPlugin'
++            try:
++                os.makedirs(user_plugins_PPP + "/scripts")
++            except:
++                pass
++
+         ## Load all scripts in the scripts folder
+         try:
+-            self.loadAllScripts(os.path.join(PluginRegistry.getInstance().getPluginPath("PostProcessingPlugin"), "scripts"))
++            self.loadAllScripts(os.path.join(PluginRegistry.getInstance().getPluginPath("PostProcessingPlugin"), "scripts"), user_plugins_PPP + "/scripts")
+         except Exception as e:
+             print("Exception occured", e)  # TODO: Debug code (far to general catch. Remove this once done testing)
+ 
+@@ -172,4 +194,4 @@
+     def showPopup(self):
+         if self._view is None:
+             self._createView()
+-        self._view.show()
+\ Kein Zeilenumbruch am Dateiende.
++        self._view.show()
+diff -Nur Cura-2.5.0.AppImage.AppDir/usr/bin/plugins/plugins/PostProcessingPlugin/PostProcessingPlugin.qml Cura-2.5.0.jw1.AppImage.AppDir/usr/bin/plugins/plugins/PostProcessingPlugin/PostProcessingPlugin.qml
+--- Cura-2.5.0.AppImage.AppDir/usr/bin/plugins/plugins/PostProcessingPlugin/PostProcessingPlugin.qml	2017-04-19 04:34:28.000000000 +0200
++++ Cura-2.5.0.jw1.AppImage.AppDir/usr/bin/plugins/plugins/PostProcessingPlugin/PostProcessingPlugin.qml	2017-08-04 03:10:12.128527922 +0200
+@@ -441,6 +441,12 @@
+             Cura.SettingUnknown { }
+         }
+     }
++
++    leftButtons: Label
++    {
++        id: activeScriptsDesc
++        text: catalog.i18nc("@desc", "Place your scripts in $HOME/.config/cura/plugins/PostProcessingPlugin/scripts/")
++    }
+     rightButtons: Button
+     {
+         text: catalog.i18nc("@action:button", "Close")
+@@ -488,4 +494,4 @@
+             label: Label{ }
+         }
+     }
+-}
+\ Kein Zeilenumbruch am Dateiende.
++}
