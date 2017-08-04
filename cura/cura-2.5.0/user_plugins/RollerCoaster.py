@@ -1,11 +1,38 @@
-from ..Script import Script
+
+if __name__ != '__main__':
+  from ..Script import Script
+else:
+  import re, sys
+
+  class Script:
+    def __init__(self):
+      pass
+    def getSettingValueByKey(self, name):
+      if name == "pause_height": return 4
+      return 0
+    ##  Convenience function that finds the value in a line of g-code.
+    #   When requesting key = x from line "G1 X100" the value 100 is returned.
+    def getValue(self, line, key, default = None):
+        if not key in line or (';' in line and line.find(key) > line.find(';')):
+            return default
+        sub_part = line[line.find(key) + 1:]
+        m = re.search('^-?[0-9]+\.?[0-9]*', sub_part)
+        if m is None:
+            return default
+        try:
+            return float(m.group(0))
+        except:
+            return default
+
+
+
 class RollerCoaster(Script):
     def __init__(self):
         super().__init__()
 
     def getSettingDataString(self):
         return """{
-            "name":"RollerCoaster Pause at height",
+            "name":"RollerCoaster layer height manipulation",
             "key": "RollerCoaster",
             "metadata": {},
             "version": 2,
@@ -13,7 +40,7 @@ class RollerCoaster(Script):
             {
                 "pause_height":
                 {
-                    "label": "RollerCoaster Pause height",
+                    "label": "RollerCoaster height",
                     "description": "RollerCoaster At what height should the pause occur",
                     "unit": "mm",
                     "type": "float",
@@ -101,7 +128,7 @@ class RollerCoaster(Script):
 
                             prepend_gcode = ";TYPE:CUSTOM\n"
                             prepend_gcode += ";added code by post processing\n"
-                            prepend_gcode += ";script: PauseAtHeight.py\n"
+                            prepend_gcode += ";script: RollerCoaster.py\n"
                             prepend_gcode += ";current z: %f \n" % (current_z)
 
                             #Retraction
@@ -154,3 +181,10 @@ class RollerCoaster(Script):
                             return data
                         break
         return data
+
+if __name__ == '__main__':
+    r = RollerCoaster()
+    data_in = open(sys.argv[1]).readlines()
+    data_out = r.execute(data_in)
+    print(''.join(data_out))
+
