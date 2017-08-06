@@ -19,7 +19,8 @@ else:
       """ code all parameters here, for standalone usage """
       if name == "max_grade_perc"     : return 50.0
       if name == "mode"               : return "x"
-      if name == "periods"            : return 0.5
+      if name == "shape"              : return "triangular"
+      if name == "periods"            : return 1.0
       if name == "start_phase_perc"   : return 0.0
       if name == "max_layer_mul"      : return 2.0
       if name == "min_layer_mul"      : return 0.5
@@ -28,8 +29,8 @@ else:
       if name == "max_x"              : return 30.0
       if name == "min_y"              : return -30.0
       if name == "max_y"              : return 30.0
+      if name == "max_segment_len"    : return 2.0
       if name == "adaptive_flow_perc" : return 100.0
-      if name == "shape"              : return "sinuid"
       return None
 
     ##  Copied from Script.py:
@@ -95,6 +96,14 @@ class RollerCoaster(Script):
                     "minimum_value": 0.1,
                     "minimum_value_warning": 0.49,
                     "maximum_value_warning": 100.0
+                },
+                "shape":
+                {
+                    "label": "Pattern Shape",
+                    "description": "Repetitive shape of the pattern.",
+                    "type": "enum",
+                    "options": { "triangular": "Triangles", "sinuid": "Sinus", "concave": "Concave", "convex": "Convex" },
+                    "default_value": "triangular"
                 },
                 "start_phase_perc":
                 {
@@ -175,19 +184,22 @@ class RollerCoaster(Script):
                 {
                     "label": "Adapt flow rate",
                     "description": "0%: do not adapt flow rate; 100%: compensate flow for thicker and thinner layers",
+                    "unit": "%",
                     "type": "float",
                     "default_value": 100.0,
                     "minimum_value": 0.0,
                     "maximum_value_warning": 200
                 },
-                "shape":
+                "max_segment_len":
                 {
-                    "label": "Pattern Shape",
-                    "description": "Repetitive shape of the pattern.",
-                    "type": "enum",
-                    "options": { "triangular": "Triangles", "sinuid": "Sinus", "concave": "Concave", "convex": "Convex" },
-                    "default_value": "triangular"
+                    "label": "Maximum Segment Length",
+                    "description", "Subdivide straight edges. Needed for non-linear pattern shapes (i.e. all except Triangles).",
+                    "unit": "mm",
+                    "type": "float",
+                    "default_value": 2.0,
+                    "minimum_value": 0.5
                 }
+
             }
         }"""
 
@@ -208,7 +220,6 @@ class RollerCoaster(Script):
         """ assuming m is in the range [0..1], we map m=0 to min_layer_mul and m=1 to max_layer_mul
             Between these extrema, we do linear interpolation.
         """
-        return math.exp(self.ln_min_layer_mul + m * (self.ln_max_layer_mul - self.ln_min_layer_mul))
         d = self.opt['max_layer_mul'] - self.opt['min_layer_mul']
         return self.opt['min_layer_mul'] + m * d
 
@@ -230,12 +241,14 @@ class RollerCoaster(Script):
             m = 2.0 * v
         else:
             m = 2.0 * (1.0 - v)
+        # print("v=%g, m=%g" % (v,m))
         return self.interpolate_layer_mul(m)
 
 
     def periodic_shape_sinuid(self, v):
         v = v % 1.0
         m = 0.5 - 0.5 * math.cos(2.0 * math.pi * v)
+        # print("v=%g, m=%g" % (v,m))
         return self.interpolate_layer_mul(m)
 
 
@@ -245,12 +258,14 @@ class RollerCoaster(Script):
             m = 4.0 * v * v
         else:
             m = 4.0 * (1.0 - v) * (1.0 - v)
+        # print("v=%g, m=%g" % (v,m))
         return self.interpolate_layer_mul(m)
 
 
     def periodic_shape_convex(self, v):
         v = v % 1.0
         m = 1.0 - 4.0*(v-0.5)*(v-0.5)
+        # print("v=%g, m=%g" % (v,m))
         return self.interpolate_layer_mul(m)
 
 
@@ -302,6 +317,13 @@ class RollerCoaster(Script):
         raise ValueError('only half implemented.')
 
 
+    def layer_multiplier_identity(self, x, y):
+        """We switch to this layer_multiplier, once we hit the max_grade_perc limit.
+           This causes all higher layers to repeat the same pattern in parallel lines.
+        """
+        return 1.0
+
+
     def execute(self, data):
         x = 0.
         y = 0.
@@ -319,6 +341,7 @@ class RollerCoaster(Script):
                 "max_x",
                 "min_y",
                 "max_y",
+                "max_segment_len",
                 "adaptive_flow_perc",
                 "shape" ):
             self.opt[option] = self.getSettingValueByKey(option)
