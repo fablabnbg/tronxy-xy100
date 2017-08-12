@@ -12,6 +12,7 @@ External references:
 * http://www.gearbest.com/3d-printers-3d-printer-kits/pp_361425.html
 * https://github.com/erikkallen/Marlin_tronxy
 * http://www.thingiverse.com/thing:1683070 Anet A8 Improved X-belt Tensioner
+* https://www.thingiverse.com/thing:2267392 TronXY XY-100 Startt iMakr - Fan Shroud Duct
 * https://www.imakr.com/eu/en/forum/topic/32-startt-why-no-topics-or-usa-forums/page-2#post-65
 
 Electronics:

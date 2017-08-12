@@ -1,0 +1,25 @@
+TronXY XY-100 and iMakr Startt - Fan Shroud and Duct
+Created On: 2017-04-23
+Created By: Mark Dickson
+
+This part is licensed under the Creative Commons - Attribution - Non-Commercial - Share-Alike (CC BY-NC-SA) license.  
+You may do whatever you want with this file and design for your own personal use, but I drafted this up for the hobbyist community and wish to keep it "open-source."  
+If you remix and re-release any part of this file, please ensure it is licensed under the same conditions.
+
+
+This part is also available on Thingiverse here: https://www.thingiverse.com/thing:2267392
+
+Description from Thingiverse:
+2017-04-24 - Ran the part through NetFabb to fix some minor issues.
+
+For those of you making the Startt printer from iMakr or the TronXY XY-100, you probably found that the 3D printed parts that came with your kit were not printed with the most care. Some other people have designed and posted various replacement parts that you can print yourself, but no one seemed to have posted the fan shroud, even though it was requested in the forums.
+
+So here is my version of the fan shroud that came with my Startt kit from iMakr.
+
+You can also find a number of redesigned parts here:
+https://www.thingiverse.com/thing:2174029/
+
+In addition to the Left and Right side X-Axis Gantry ends available here:
+https://www.imakr.com/us/en/forum/topic/42-startt-3d-printed-part-files
+
+If you have any feedback or suggestions, please let me know.
