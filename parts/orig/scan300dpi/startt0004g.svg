@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -55,29 +55,47 @@
      inkscape:window-width="1920"
      inkscape:window-height="1050"
      id="namedview4"
-     showgrid="true"
+     showgrid="false"
      units="mm"
      inkscape:document-units="mm"
-     inkscape:snap-global="false"
-     inkscape:zoom="2.044271"
-     inkscape:cx="720.59085"
-     inkscape:cy="114.17375"
+     inkscape:snap-global="true"
+     inkscape:zoom="7.053374"
+     inkscape:cx="675.26888"
+     inkscape:cy="836.30024"
      inkscape:window-x="25"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2">
+     inkscape:current-layer="svg2"
+     inkscape:snap-object-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-center="true">
     <inkscape:grid
        type="xygrid"
        id="grid12" />
   </sodipodi:namedview>
   <image
-     sodipodi:absref="png/startt0004.png"
+     sodipodi:absref="/home/src/github/fablabnbg/tronxy-xy100/parts/orig/scan300dpi/png/startt0004.png"
      xlink:href="png/startt0004.png"
-     clip-path="url(#clipPath557)"
-     width="813.44"
-     height="1119.04"
-     preserveAspectRatio="none"
-     id="image416"
+     style="opacity:0.482"
+     transform="rotate(-93.029702,325.71169,667.05995)"
+     y="-4.7416925"
      x="5.8074522"
-     y="-4.7416925" />
+     id="image416"
+     preserveAspectRatio="none"
+     height="1119.04"
+     width="813.44"
+     clip-path="url(#clipPath557)" />
+  <g
+     id="g4195">
+    <path
+       id="path4179"
+       d="M 688.62891 255.41797 A 22.677166 22.677166 0 0 0 686.17773 255.57812 L 686.17773 255.55078 L 649.7832 259.32422 L 649.7832 259.34766 A 18.897639 18.897639 0 0 0 633.07031 278.0957 A 18.897639 18.897639 0 0 0 650.61133 296.92383 L 686.17773 300.63867 L 686.17773 300.63086 A 22.677166 22.677166 0 0 0 688.62891 300.77148 A 22.677166 22.677166 0 0 0 711.30664 278.0957 A 22.677166 22.677166 0 0 0 688.62891 255.41797 z "
+       style="opacity:0.48200001;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <circle
+       r="6.6141734"
+       cy="278.09515"
+       cx="651.96851"
+       id="path4183"
+       style="opacity:0.48200001;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
 </svg>

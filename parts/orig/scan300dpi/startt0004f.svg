@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,26 +58,51 @@
      showgrid="true"
      units="mm"
      inkscape:document-units="mm"
-     inkscape:snap-global="false"
-     inkscape:zoom="2.044271"
-     inkscape:cx="720.59085"
-     inkscape:cy="114.17375"
+     inkscape:snap-global="true"
+     inkscape:zoom="5.7820715"
+     inkscape:cx="409.74418"
+     inkscape:cy="565.27333"
      inkscape:window-x="25"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2">
+     inkscape:current-layer="svg2"
+     inkscape:snap-object-midpoints="true">
     <inkscape:grid
        type="xygrid"
        id="grid12" />
   </sodipodi:namedview>
   <image
-     sodipodi:absref="png/startt0004.png"
+     sodipodi:absref="/home/src/github/fablabnbg/tronxy-xy100/parts/orig/scan300dpi/png/startt0004.png"
      xlink:href="png/startt0004.png"
-     clip-path="url(#clipPath534)"
-     width="813.44"
-     height="1119.04"
-     preserveAspectRatio="none"
-     id="image416"
+     style="opacity:0.49200045"
+     inkscape:transform-center-y="363.53762"
+     inkscape:transform-center-x="467.10854"
+     transform="rotate(-91.445836,364.5572,966.26521)"
+     y="-4.7416925"
      x="5.8074522"
-     y="-4.7416925" />
+     id="image416"
+     preserveAspectRatio="none"
+     height="1119.04"
+     width="813.44"
+     clip-path="url(#clipPath534)" />
+  <g
+     id="g3578">
+    <path
+       inkscape:connector-curvature="0"
+       id="path3569"
+       d="m 364.7244,544.55185 h 20.7874 v 9.44882 h 20.7874 v -5.66929 h 13.22835 v 5.66929 h 26.45669 v 13.22834 h -26.45669 v 5.66929 H 406.2992 v -5.66929 h -20.7874 v 30.23622 h 86.92913 l 1.88977,-1.88976 v -69.92126 l -1.88977,-1.88976 H 364.7244 Z"
+       style="opacity:0.49200009;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <circle
+       r="6.6141734"
+       cy="542.66211"
+       cx="455.43307"
+       id="path3571"
+       style="opacity:0.49200021;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <circle
+       style="opacity:0.49200045;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="circle3573"
+       cx="455.43307"
+       cy="578.56757"
+       r="6.6141734" />
+  </g>
 </svg>

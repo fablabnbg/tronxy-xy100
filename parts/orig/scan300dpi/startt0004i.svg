@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,10 +58,10 @@
      showgrid="true"
      units="mm"
      inkscape:document-units="mm"
-     inkscape:snap-global="false"
-     inkscape:zoom="2.044271"
-     inkscape:cx="189.11442"
-     inkscape:cy="114.17375"
+     inkscape:snap-global="true"
+     inkscape:zoom="5.7820715"
+     inkscape:cx="70.652555"
+     inkscape:cy="72.799438"
      inkscape:window-x="25"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -71,13 +71,21 @@
        id="grid12" />
   </sodipodi:namedview>
   <image
-     sodipodi:absref="png/startt0004.png"
+     sodipodi:absref="/home/src/github/fablabnbg/tronxy-xy100/parts/orig/scan300dpi/png/startt0004.png"
      xlink:href="png/startt0004.png"
-     clip-path="url(#clipPath603)"
-     width="813.44"
-     height="1119.04"
-     preserveAspectRatio="none"
-     id="image416"
+     transform="rotate(0.22877474,66.013688,555.47009)"
+     style="opacity:0.47999998"
+     y="-4.7416925"
      x="5.8074522"
-     y="-4.7416925" />
+     id="image416"
+     preserveAspectRatio="none"
+     height="1119.04"
+     width="813.44"
+     clip-path="url(#clipPath603)" />
+  <path
+     style="opacity:0.47999998;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 15.11811,981.08727 h 7.559055 v -20.7874 h 20.787401 v 20.7874 h 18.897638 v 20.78743 h -5.669292 v 13.2283 h 5.669292 v 26.4567 l 13.228346,0 0,-26.4567 h 5.669291 v -13.2283 H 75.59055 v -20.78743 h 43.46457 v 7.55906 h 13.22834 v -7.55906 h 20.78741 V 1039.67 h -20.78741 v -5.6693 h -13.22834 v 5.6693 H 92.598423 v 13.2283 h 26.456697 v 5.6693 h 13.22834 v -5.6693 h 20.78741 v 18.8977 h 20.7874 v 20.7874 h -20.7874 l -1e-5,7.559 h -20.7874 c -71.81102,0 -117.16535,-54.8032 -117.16535,-119.05513 z"
+     id="path5414"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccc" />
 </svg>
