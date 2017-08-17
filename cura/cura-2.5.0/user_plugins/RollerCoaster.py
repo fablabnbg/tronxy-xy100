@@ -327,7 +327,7 @@ class RollerCoaster(Script):
     def execute(self, data):
         x = 0.
         y = 0.
-        prev_e = 0.
+        last_e = 0.
         current_z = 0.
         for option in (
                 "max_grade_perc",
@@ -365,16 +365,19 @@ class RollerCoaster(Script):
         print("; lmult = " + str(self.lmult))
         print("; shape = " + str(self.shape))
 
-        for x in range(-40, 40):
-            print("x: %g, H:%g" % (x, self.lmult(x,0)) )
-
-        sys.exit(1)
+        # for x in range(-40, 40):
+        #     print("x: %g, H:%g" % (x, self.lmult(x,0)) )
+        #
+        # sys.exit(1)
 
         layers_started = False
         prev_layer_z = None
         data_out = []
+        max_segment_len_sq = self.opt['max_segment_len'] * self.opt['max_segment_len']
         for layer in data:
             layer_z = None
+            last_x = None
+            last_y = None
             layer_out = []
             index = data.index(layer)
             lines = layer.split("\n")
@@ -390,7 +393,7 @@ class RollerCoaster(Script):
                     z = self.getValue(line, 'Z')
                     x = self.getValue(line, 'X', x)
                     y = self.getValue(line, 'Y', y)
-                    e = self.getValue(line, 'E', prev_e)
+                    e = self.getValue(line, 'E', last_e)
 
                     ## Primitive layer height calculation ahead:
                     # Compare the first z-value from this layer
@@ -399,11 +402,30 @@ class RollerCoaster(Script):
                     # direction changes.
                     if z is not None and layer_z is None: layer_z = z
                     if prev_layer_z is not None and layer_z is not None:
-                            line = line + "\t; H%g d%g" % (layer_z - prev_layer_z, e - prev_e)
-                    prev_e = e
-                layer_out.append(line)
+                        line_comment = "; H%g" % (layer_z - prev_layer_z)
+                        if (last_x is None or last_y is None):
+                            line = "G0 X%g Y%g E%g\t%s" % (x, y, e, line_comment)
+                            layer_out.append(line)
+                        else:
+                            d_sq = (x - last_x) * (x - last_x) + (y - last_y)
+                            n = math.ceil(d_sq / max_segment_len_sq)
+                            x_step = (x - last_x) / n
+                            y_step = (y - last_y) / n
+                            e_step = (e - last_e) / n
+                            for i in range(1, 1+int(n)):
+                                line = "G1 X%g Y%g E%g\t%s" % (last_x+i*x_step, last_y+i*y_step, last_e+i*e_step, line_comment)
+                                layer_out.append(line)
+                    else:
+                        layer_out.append(line)
+                    last_e = e
+                    last_x = None
+                    last_y = None
+                else:
+                    layer_out.append(line)
             data_out.append('\n'.join(layer_out))
             prev_layer_z = layer_z
+            last_x = None
+            last_y = None
         return data_out
 
 if __name__ == '__main__':
