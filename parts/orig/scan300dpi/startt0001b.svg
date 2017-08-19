@@ -59,13 +59,13 @@
      units="mm"
      inkscape:document-units="mm"
      inkscape:snap-global="true"
-     inkscape:zoom="1.7921246"
-     inkscape:cx="310.41566"
-     inkscape:cy="513.83638"
-     inkscape:window-x="25"
+     inkscape:zoom="1.2672235"
+     inkscape:cx="151.38654"
+     inkscape:cy="512.72039"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2"
+     inkscape:current-layer="g976"
      inkscape:snap-object-midpoints="true">
     <inkscape:grid
        type="xygrid"
@@ -74,14 +74,14 @@
   <image
      sodipodi:absref="/home/src/github/fablabnbg/tronxy-xy100/parts/orig/scan300dpi/png/startt0001.png"
      xlink:href="png/startt0001.png"
-     transform="rotate(-0.32154486,576.08235,1355.1345)"
-     width="813.44"
-     height="1119.04"
-     preserveAspectRatio="none"
-     id="image10"
-     x="2.933774"
+     clip-path="url(#clipPath52)"
      y="-1.2573317"
-     clip-path="url(#clipPath52)" />
+     x="2.933774"
+     id="image10"
+     preserveAspectRatio="none"
+     height="1119.04"
+     width="813.44"
+     transform="rotate(-0.32154486,576.08235,1355.1345)" />
   <g
      id="g976">
     <rect
@@ -95,7 +95,7 @@
     <circle
        r="7.5590553"
        cy="863.92194"
-       cx="449.76373"
+       cx="451.65353"
        id="path961"
        style="opacity:0.9;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <circle
@@ -107,7 +107,7 @@
     <circle
        style="opacity:0.9;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="circle967"
-       cx="449.76373"
+       cx="451.65353"
        cy="467.07135"
        r="7.5590553" />
     <circle

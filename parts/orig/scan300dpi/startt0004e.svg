@@ -55,17 +55,17 @@
      inkscape:window-width="1920"
      inkscape:window-height="1050"
      id="namedview4"
-     showgrid="true"
+     showgrid="false"
      units="mm"
      inkscape:document-units="mm"
      inkscape:snap-global="true"
-     inkscape:zoom="5.7820715"
-     inkscape:cx="756.22477"
-     inkscape:cy="329.28075"
-     inkscape:window-x="25"
+     inkscape:zoom="6.2676794"
+     inkscape:cx="720.18891"
+     inkscape:cy="314.4567"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2"
+     inkscape:current-layer="g2970"
      inkscape:snap-object-midpoints="true">
     <inkscape:grid
        type="xygrid"
@@ -74,30 +74,40 @@
   <image
      sodipodi:absref="/home/src/github/fablabnbg/tronxy-xy100/parts/orig/scan300dpi/png/startt0004.png"
      xlink:href="png/startt0004.png"
-     style="opacity:0.44900004"
-     inkscape:transform-center-y="351.49731"
-     inkscape:transform-center-x="236.67406"
-     transform="rotate(-94.315335,718.6238,837.22767)"
-     y="-4.7416925"
-     x="5.8074522"
-     id="image416"
-     preserveAspectRatio="none"
-     height="1119.04"
+     sodipodi:insensitive="true"
+     clip-path="url(#clipPath511)"
      width="813.44"
-     clip-path="url(#clipPath511)" />
+     height="1119.04"
+     preserveAspectRatio="none"
+     id="image416"
+     x="5.8074522"
+     y="-4.7416925"
+     transform="rotate(-94.315335,718.6238,837.22767)"
+     inkscape:transform-center-x="236.67406"
+     inkscape:transform-center-y="351.49731"
+     style="opacity:0.44900004" />
   <g
      id="g2970">
-    <path
-       sodipodi:nodetypes="cccccccccccccccczzc"
-       inkscape:connector-curvature="0"
-       id="path2964"
-       d="m 672.7559,759.98492 v 28.34646 h 20.7874 v 9.4488 h 20.7874 v -5.66929 h 13.22835 v 5.66929 h 20.7874 v 13.22835 h -20.7874 v 5.66929 H 714.3307 v -5.66929 h -20.7874 v 30.23622 c 69.92125,13.22835 103.937,-45.35432 103.937,-66.14173 0,-20.7874 -20.7874,-26.45669 -31.23244,-23.6648 -10.44504,2.79189 -17.90142,8.54669 -93.49196,8.5467 z"
-       style="opacity:0.44900004;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <circle
-       r="11.338583"
-       cy="776.9928"
-       cx="772.91339"
-       id="path2966"
-       style="opacity:0.44900004;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="g45417">
+      <path
+         style="opacity:0.44900004;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 693.5433,842.75657 c 69.92125,13.22835 104.69291,-44.67429 104.69291,-66.89764 0,-22.22335 -21.54331,-27.2126 -31.98835,-24.42071 -10.44504,2.79189 -17.90142,7.79078 -93.49196,7.79079 v 29.10237 h 20.7874 z"
+         id="path2964"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="czzcccc" />
+      <circle
+         style="opacity:0.44900004;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path2966"
+         cx="772.91339"
+         cy="776.9928"
+         r="11.338583" />
+      <path
+         sodipodi:nodetypes="ccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path37298"
+         d="m 693.5433,811.00853 h 20.7874 l -10e-6,4.15749 h 12.09448 v -4.15749 h 21.16537 v -12.8504 h -21.16537 v -4.15746 l -12.09448,-2e-5 v 4.15748 h -20.7874 z"
+         style="opacity:0.9;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
   </g>
 </svg>
