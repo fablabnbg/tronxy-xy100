@@ -35,7 +35,7 @@
        clipPathUnits="userSpaceOnUse"
        id="clipPath419">
       <rect
-         style="opacity:0.9;fill:#ffff00;fill-opacity:0.53082192;stroke:#0000ff;stroke-width:0.75590557;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:#ffff00;fill-opacity:0.53082192;stroke:#0000ff;stroke-width:0.75590557;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect421"
          width="270.27667"
          height="203.89278"
@@ -59,13 +59,13 @@
      units="mm"
      inkscape:document-units="mm"
      inkscape:snap-global="true"
-     inkscape:zoom="3.8022902"
-     inkscape:cx="195.09764"
+     inkscape:zoom="3.2972985"
+     inkscape:cx="192.89887"
      inkscape:cy="946.00442"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2">
+     inkscape:current-layer="g33250">
     <inkscape:grid
        type="xygrid"
        id="grid12" />
@@ -73,17 +73,17 @@
   <image
      sodipodi:absref="/home/src/github/fablabnbg/tronxy-xy100/parts/orig/scan300dpi/png/startt0004.png"
      xlink:href="png/startt0004.png"
-     clip-path="url(#clipPath419)"
-     width="813.44"
-     height="1119.04"
-     preserveAspectRatio="none"
-     id="image416"
-     x="5.8074522"
-     y="-4.7416925"
-     transform="rotate(-0.94625418,-7928.1897,2180.6039)"
-     inkscape:transform-center-x="-173.32202"
+     style="opacity:0.477"
      inkscape:transform-center-y="333.91712"
-     style="opacity:0.477" />
+     inkscape:transform-center-x="-173.32202"
+     transform="rotate(-0.94625418,-7928.1897,2180.6039)"
+     y="-4.7416925"
+     x="5.8074522"
+     id="image416"
+     preserveAspectRatio="none"
+     height="1119.04"
+     width="813.44"
+     clip-path="url(#clipPath419)" />
   <g
      id="g33250">
     <path
@@ -91,12 +91,12 @@
        inkscape:connector-curvature="0"
        id="path815"
        d="m 298.58267,145.43374 h 20.7874 v 56.31496 h -20.7874 v 44.22048 l -1.88976,1.88976 h -20.7874 v -94.48819 l -9.44882,-9.44882 H 122.83464 l -9.44882,9.44882 v 98.26772 l -1.88976,1.88976 h -5.66929 L 85.039368,236.52036 V 79.669966 h 79.370082 l 3.77953,3.779528 h 130.39369 z"
-       style="opacity:0.47700004;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        sodipodi:nodetypes="ccccccccccccc"
        inkscape:connector-curvature="0"
        id="path16453"
        d="m 298.58267,107.2605 h -20.7874 l 10e-6,-4.15749 H 265.7008 v 4.15749 h -27.59055 v 12.85041 h 27.59055 v 4.15746 l 12.09448,2e-5 v -4.15748 h 20.7874 z"
-       style="opacity:0.9;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
 </svg>

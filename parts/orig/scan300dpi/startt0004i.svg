@@ -35,7 +35,7 @@
        clipPathUnits="userSpaceOnUse"
        id="clipPath603">
       <rect
-         style="opacity:0.9;fill:#ffff00;fill-opacity:0.53082192;stroke:#0000ff;stroke-width:0.75590557;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:#ffff00;fill-opacity:0.53082192;stroke:#0000ff;stroke-width:0.75590557;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect605"
          width="169.3772"
          height="146.42825"
@@ -59,13 +59,13 @@
      units="mm"
      inkscape:document-units="mm"
      inkscape:snap-global="true"
-     inkscape:zoom="3.5884058"
-     inkscape:cx="69.165381"
+     inkscape:zoom="4.400779"
+     inkscape:cx="46.027801"
      inkscape:cy="108.09444"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2">
+     inkscape:current-layer="g61473">
     <inkscape:grid
        type="xygrid"
        id="grid12" />
@@ -73,15 +73,15 @@
   <image
      sodipodi:absref="/home/src/github/fablabnbg/tronxy-xy100/parts/orig/scan300dpi/png/startt0004.png"
      xlink:href="png/startt0004.png"
-     clip-path="url(#clipPath603)"
-     width="813.44"
-     height="1119.04"
-     preserveAspectRatio="none"
-     id="image416"
-     x="5.8074522"
-     y="-4.7416925"
+     transform="rotate(0.22877474,66.013688,555.47009)"
      style="opacity:0.47999998"
-     transform="rotate(0.22877474,66.013688,555.47009)" />
+     y="-4.7416925"
+     x="5.8074522"
+     id="image416"
+     preserveAspectRatio="none"
+     height="1119.04"
+     width="813.44"
+     clip-path="url(#clipPath603)" />
   <g
      id="g61473">
     <path
@@ -89,9 +89,9 @@
        inkscape:connector-curvature="0"
        id="path5414"
        d="m 119.05512,981.08727 v 7.55906 h 13.22834 v -7.55906 h 20.78741 v 90.70873 h 20.7874 v 20.7874 h -20.7874 l -1e-5,7.559 h -20.7874 c -71.81102,0 -117.16535,-54.8032 -117.16535,-119.05513 h 7.181102 v -20.7874 h 22.677165 v 20.7874 z"
-       style="opacity:0.47999998;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
-       style="opacity:0.9;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 153.07087,1040.0479 h -20.78742 v -4.1575 h -12.0945 v 4.1575 H 93.354329 v 12.8504 h 26.834621 v 4.1575 h 12.0945 v -4.1575 h 20.78742 z"
        id="path61464"
        inkscape:connector-curvature="0"
@@ -101,6 +101,6 @@
        inkscape:connector-curvature="0"
        id="path61466"
        d="m 62.740182,981.08727 v 20.78743 h -4.157505 v 12.0945 h 4.157505 v 26.8347 h 12.8504 v -26.8347 h 4.1575 v -12.0945 h -4.1575 v -20.78743 z"
-       style="opacity:0.9;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="opacity:1;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
 </svg>

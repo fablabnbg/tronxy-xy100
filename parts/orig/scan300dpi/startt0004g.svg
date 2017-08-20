@@ -35,7 +35,7 @@
        clipPathUnits="userSpaceOnUse"
        id="clipPath557">
       <rect
-         style="opacity:0.9;fill:#ffff00;fill-opacity:0.53082192;stroke:#0000ff;stroke-width:0.75590563;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:#ffff00;fill-opacity:0.53082192;stroke:#0000ff;stroke-width:0.75590563;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect559"
          width="54.910961"
          height="91.15184"
@@ -59,13 +59,13 @@
      units="mm"
      inkscape:document-units="mm"
      inkscape:snap-global="true"
-     inkscape:zoom="8.6501755"
-     inkscape:cx="663.5385"
+     inkscape:zoom="7.5013241"
+     inkscape:cx="653.84021"
      inkscape:cy="836.30024"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g4195"
+     inkscape:current-layer="g53440"
      inkscape:snap-object-midpoints="true"
      inkscape:object-paths="true"
      inkscape:snap-center="true">
@@ -76,15 +76,15 @@
   <image
      sodipodi:absref="/home/src/github/fablabnbg/tronxy-xy100/parts/orig/scan300dpi/png/startt0004.png"
      xlink:href="png/startt0004.png"
-     clip-path="url(#clipPath557)"
-     width="813.44"
-     height="1119.04"
-     preserveAspectRatio="none"
-     id="image416"
-     x="5.8074522"
-     y="-4.7416925"
+     style="opacity:0.482"
      transform="rotate(-93.029702,325.71169,667.05995)"
-     style="opacity:0.482" />
+     y="-4.7416925"
+     x="5.8074522"
+     id="image416"
+     preserveAspectRatio="none"
+     height="1119.04"
+     width="813.44"
+     clip-path="url(#clipPath557)" />
   <g
      id="g4195">
     <g
@@ -92,13 +92,13 @@
       <path
          sodipodi:nodetypes="ccccccc"
          inkscape:connector-curvature="0"
-         style="opacity:0.48200001;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 649.7832,259.34766 c -9.51869,1.10787 -16.70128,9.1651 -16.71289,18.74804 0.0109,9.9025 7.66406,18.11726 17.54102,18.82813 l 38.7742,3.47054 c 12.52393,3.1e-4 22.67696,-9.77493 22.67773,-22.29886 3.1e-4,-12.52469 -10.15304,-22.29987 -22.67773,-22.29956 z"
          id="path4179" />
       <ellipse
          ry="6.0472445"
          rx="6.0472441"
-         style="opacity:0.48200001;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:#ffff00;fill-opacity:0.53082192;stroke:#ff0000;stroke-width:0.75590551;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path4183"
          cx="651.77954"
          cy="278.09515" />
