@@ -9,8 +9,14 @@
 # directory, where Cura-2.5.AppImage is and make both
 # executable.
 #
+# cura writes its file dialog defaults to ~/.config/QtProject.conf
+# This this file often becomes readonly and no longer updates itself.
+#
 # (C) juergen@fabmail.org
 #
+
+chmod u+w $HOME/.config/QtProject.conf 2>&1 >/dev/null
+
 args=()
 for arg in "$@"; do
 	case $arg in
